@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 	<html>
-		<head><title> Assignment 7 </title></head>
+		<head><title> indexOf </title></head>
 		
 		<body>
 			<script type = "text/javascript">
@@ -13,20 +13,6 @@
 					}
 					return -1;
 				}
-				
-				function copy(x) {
-					var array = new Array();
-					for (var i = 0; i < x.length; i++){
-						array [i] = x[i];
-					}
-					return array;
-				}
-				var colors = ["maroon", "red", "orange", "yellow", "olive", "purple", "fuchia", "white", "lime", "green", "navy", "blue", "aqua", "teal", "black", "silver", "gray"];
-				var newArr = new Array();
-				newArr = copy(colors);
-				for (var i = 0; i < newArr.length; i++) {
-				document.writeln(newArr[i]+", ");
-				
 				var color = window.prompt("Enter a color");
 				var array = ["maroon", "red", "orange", "yellow", "olive", "purple", "fuchia", "white", "lime", "green", "navy", "blue", "aqua", "teal", "black", "silver", "gray"];
 				document.writeln(indexOf(array, color));
