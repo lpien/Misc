@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	
+	<meta charset="utf-8">
+	
+	<!-- IE compatability -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="hearnstyle.css">
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+  <!-- font -->
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+  <title>MB Hearn - Home</title>
+  
+  <style>
+	@font-face{		/* font for menu */
+		font-family: Flux; src: url('Flux.ttf');
+	}
+	
+	@font-face{		/* backup font for menu */
+		font-family: ARCHITEC; src: url('ARCHITEC.ttf')
+	}
+	
+	@font-face{		/* large header font */
+		font-family: Fredericka; src: url('FrederickatheGreat-Regular.ttf');
+	}
+	
+	@media screen and (max-width: 1120px){		/* logo disappears when screen resolution less than 1120px */
+		#icon{display:none;}
+	}
+	
+	@media (max-width: 1000px) {		/* menu collapses when screen resolution less than 1000px */
+		.navbar-toggle {
+			display: block;
+		}
+		
+		.navbar-collapse.in{
+			overflow-y: auto !important;
+		}
+		
+		.navbar-collapse.collapse {
+			display: none!important;
+		}
+		
+		.navbar-collapse.collapse.in{
+			display:block !important;
+		}
+		
+		.navbar-nav>li {
+			float: none;
+		}
+	}
+	
+	@media screen and (max-width:515px){		/* company name in menu shrinks for screen resolution less than 515px */
+		.brandname{font-size: 18px !important;}
+	}
+	
+	html, body{
+		margin:0;
+		padding:0;
+		height: 100%;
+		width: 100%;
+		overflow:hidden;
+	}
+	
+	.full{		/* background-image works across IE and Chrome */
+		height: 100%;
+		width: 100%;
+		background: url(dopehouse1.JPG) no-repeat center center fixed;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+	}
+	
+	.bground{		/* large center text */
+		left:45%;
+		position:inherit;
+		margin-top:760px !important;
+		transition: all .2s ease-in-out;
+	}
+	
+	.bground:hover{		/* large center text grows on hover */
+		cursor: pointer;
+		transform: scale(1.1);
+	}
+	
+	.navbar{		/* menu color */
+		background: linear-gradient(to top, rgba(95,95,95,0), rgba(106,125,149,1));
+		border: none;
+	}
+	
+	.navbar-brand, .navbar-nav li a{		/* menu text color */
+		color:white;
+		opacity: 0.4;
+	}
+	
+	.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{		/* menu text color on hover */
+		color: #fff;
+		opacity: 1;
+	}
+	
+	.navbar-default{		/* change default menu colors */
+		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0),0 1px 5px rgba(0,0,0,0);
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0),0 1px 5px rgba(0,0,0,0); 
+	}
+	
+	.header-content{		/* positioning, size, and font of menu */
+		padding-top:3%;
+		font-family: Flux, ARCHITEC, sans-serif;
+		font-size: 22px;
+	}
+	
+	.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a{		/* menu text color */
+		color: white;
+		opacity: 0.4;
+	}
+	
+	.navbar-default .navbar-nav>li>a:hover {		/* menu text color on hover */
+		color: #fff;
+		background-color: transparent;
+		opacity: 1;
+	}
+	
+	.navbar-default .navbar-brand {		/* menu text color */
+		color: #fff;
+		font-size: 22px;
+	}
+	
+	#myNav.nav.navbar-nav.navbar-right.navbar-collapse.menu.collapse.in{		/* collapsed menu stays on right side */
+		float:right;
+	}
+	
+	.textcontent{		/* positioning of large company name */
+		bottom:10%;
+		left:38%;
+		font-family: Fredericka, sans-serif;
+		font-size: 72px;
+		letter-spacing:4px;
+		margin-bottom:-5px;
+	}
+	
+	.lines{		/* positioning and size for border lines around company information */
+		font-family: Fredericka, sans-serif;
+		size: 50px;
+		color: white;
+		border: solid white;
+		width: 70%;
+		text-align:center;
+		left:15%;
+	}
+	
+	.contentleft{		/* street name content */
+		float:right;
+		font-family: Fredericka, sans-serif;
+		font-size: 25px;
+		letter-spacing:4px;
+		padding-right:80px;
+	}
+	
+	.contentright{		/* city/state content */
+		float:left;
+		font-family: Fredericka, sans-serif;
+		font-size: 25px;
+		letter-spacing:4px;
+		padding-left:10px;
+	}
+	
+	.footer{		/* copyright */
+		position:absolute;
+		bottom:0;
+		width:100%;
+		height:20px;
+		text-align:center;
+		color:white;
+		background-color:transparent;
+	}
+	
+	#icon:hover{		/* logo in menu */
+		cursor: pointer;
+	}
+
+	 
+  </style>
+  </head>
+  <body>
+	
+	<!-- menu content -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid header-content">
+		
+			<!-- company name in top left corner -->
+			<!-- change href (should link to home page) -->
+			<a class="navbar-brand brandname" href="#">M.B.Hearn Architecture, LLC</a>
+			
+			<!-- menu collapses and turns into hamburger menu -->
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNav">
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			
+			<!-- icon -->
+			<!-- change href (should link to home page) -->
+			<div class="navbar-center navbar-brand nav-collapse" href="#">
+				<img id="icon" src="iconwhite.png" style="height:75px; width: 75px; left:45%; position:absolute; margin-top: -25px;">
+			</div>
+			
+			<!-- menu buttons to lead to different pages of website-->
+			<!-- must change href to link to proper web page -->
+			<ul class="nav navbar-nav navbar-right collapse navbar-collapse menu" id="myNav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">Profile</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			
+        </div>
+    </nav> <!-- /end menu -->
+
+    <!-- page content -->
+	<div class="container-fluid full" style="text-align:center;">
+		
+		<!-- large center text -->
+		<!-- change href to link to page (probably projects page) -->
+		<div class="bground" id="bakgrnd" href="#">
+			
+			<!-- top white line currently commented out -->
+			<!--<hr class="lines" style="bottom:17%;">-->
+			
+			<h1 style="color: white;" class="textcontent">M.B. Hearn</h1>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-6"><h3 style="color:white;" class="contentleft">1007B Main Street</h3></div>
+					<div class="col-lg-6"><h3 style="color:white; white-space:nowrap;" class="contentright">Belmar, New Jersey 07719</h3></div>
+				</div>
+			</div>
+			
+			<!-- second white line currently commented out -->
+			<!--<hr class="lines" style="bottom:2%;">-->
+		</div>
+	</div> <!-- /end content -->
+	
+	<!-- copyright information -->
+	<footer class="footer">
+      <div class="container">
+        <p style="color:#85ad86; font-family: Flux, ARCHITEC, sans-serif; font-size: 12px;">Copyright &copy; Lauren Pien</p>
+      </div>
+    </footer> <!-- /end footer -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
